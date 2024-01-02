@@ -216,7 +216,7 @@ class Converter
         callee = named_captures['callee']
         dividend = named_captures['dividend']
         divisor = named_captures['divisor']
-        expression = "math.div(#{dividend}, #{divisor})"
+        expression = "(#{dividend} / #{divisor})"
         callee.nil? ? expression : "#{callee}(#{expression})"
       end
     end
